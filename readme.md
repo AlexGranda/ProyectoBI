@@ -4,7 +4,7 @@
 
 
 ##INTEGRANTES:
-*Dávila David</li>
+*Dávila David
 *Granda Alexandra
 *Unapanta Luis
 
