@@ -36,14 +36,14 @@ Las herramientas utilizadas para esta fase corresponden a un script codificado e
 ### Pre-procesamiento de Datos
 
 Antes de comenzar se debe tomar en cuenta que tendremos dos vistas, para el procesamiento de los tweets creamos una vista donde solo seleccionaremos los tweets de Ecuador, puesto que se identificó previamente que los tweets recolectados tienen información proveniente de otros países como Perú. Para esta vista solo utilizaremos dos campos:
-    Id: Identificador para ubicar los campos de la base principal.
-    Text: Texto del tweet para limpiar y clasificar.
-    Para la otra vista la utilizaremos para enviar la información de la base en CouchDB hacia ElasticSearch esta vista contendrá los siguientes campos:
-    Id: Identificador de tweet.
-    Created_at: Fecha y hora exacta de la creación del tweet.
-    Follower_count: Número de seguidores del usuario que realiazo el tweet.
-    Text: Información del tweet.
-    Sreen_name: Del campo User se extrae el nombre del usuario
+   + Id: Identificador para ubicar los campos de la base principal.
+   + Text: Texto del tweet para limpiar y clasificar.
+Para la otra vista la utilizaremos para enviar la información de la base en CouchDB hacia ElasticSearch esta vista contendrá los siguientes campos:
+   + Id: Identificador de tweet.
+   + Created_at: Fecha y hora exacta de la creación del tweet.
+   + Follower_count: Número de seguidores del usuario que realiazo el tweet.
+   + Text: Información del tweet.
+   + Sreen_name: Del campo User se extrae el nombre del usuario
 
 ### Procesamiento de Datos
 
