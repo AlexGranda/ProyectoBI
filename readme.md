@@ -31,6 +31,8 @@ El propósito del presente proyecto es la investigación e implementación del f
 Para la primera fase del proyecto se recolectó datos utilizando un cosechador de tweets entregado al inicio del curso a través del aula virtual. Para poder extraer tweets se establecieron las coordenadas correspondientes a la ciudad de Quito.
 Las herramientas utilizadas para esta fase corresponden a un script codificado en Python, una base de datos noSQL como CouchDb y los utilitarios de Twitter para Python.
 
+* Harvers () - Recolector de Tweets
+
 ### Pre-procesamiento de Datos
 
 Antes de comenzar se debe tomar en cuenta que tendremos dos vistas, para el procesamiento de los tweets creamos una vista donde solo seleccionaremos los tweets de Ecuador, puesto que se identificó previamente que los tweets recolectados tienen información proveniente de otros países como Perú. Para esta vista solo utilizaremos dos campos:
@@ -42,3 +44,7 @@ Antes de comenzar se debe tomar en cuenta que tendremos dos vistas, para el proc
     Follower_count: Número de seguidores del usuario que realiazo el tweet.
     Text: Información del tweet.
     Sreen_name: Del campo User se extrae el nombre del usuario
+
+### Procesamiento de Datos
+
+Con la vista pre-procesada y con tweets únicamente de Ecuador, lugar de donde se realizará el análisis de los datos, se debe procesar el campo Text para poder analizar la opinión pública desde su contexto original. El procesamiento de los datos involucra la eliminación de links, emoticones y tags, en el caso de los tags no deben borrarse completamente, por el contrario, solo eliminar el carácter “#”. La siguiente parte del procesamiento es la clasificación de los tweets según su contexto donde puede ser positivo, negativo, y neutro.
