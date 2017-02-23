@@ -16,7 +16,7 @@ El propósito del presente proyecto es la investigación e implementación del f
 
 ## HERRAMIENTAS
 
-* [Python 2.7](https://www.python.org/) - Lenguaje utilziado.
+* [Python 2.7](https://www.python.org/) - Lenguaje utilizado.
 * [ElasticSearch](https://www.elastic.co/) - Herramienta de Map - Reduce.
 * [Kibana](https://www.elastic.co/products/kibana) - Presentación de Gráficos.
 
@@ -31,7 +31,7 @@ El propósito del presente proyecto es la investigación e implementación del f
 Para la primera fase del proyecto se recolectó datos utilizando un cosechador de tweets entregado al inicio del curso a través del aula virtual. Para poder extraer tweets se establecieron las coordenadas correspondientes a la ciudad de Quito.
 Las herramientas utilizadas para esta fase corresponden a un script codificado en Python, una base de datos noSQL como CouchDb y los utilitarios de Twitter para Python.
 
-* Harvers () - Recolector de Tweets
+* Harverster (https://github.com/Rainini1/ProyectoBI/blob/master/harvester_uio%20(2).py) - Recolector de Tweets
 
 ### Pre-procesamiento de Datos
 
@@ -46,11 +46,16 @@ Para la otra vista la utilizaremos para enviar la información de la base en Cou
    + Follower_count: Número de seguidores del usuario que realiazo el tweet.
    + Text: Información del tweet.
    + Sreen_name: Del campo User se extrae el nombre del usuario
+   
+   
+* Vistas (https://github.com/Rainini1/ProyectoBI/blob/master/vistas.js) - Creación de vistas para CouchDB
+
 
 ### Procesamiento de Datos
 
 Con la vista pre-procesada y con tweets únicamente de Ecuador, lugar de donde se realizará el análisis de los datos, se debe procesar el campo Text para poder analizar la opinión pública desde su contexto original. El procesamiento de los datos involucra la eliminación de links, emoticones y tags, en el caso de los tags no deben borrarse completamente, por el contrario, solo eliminar el carácter “#”. La siguiente parte del procesamiento es la clasificación de los tweets según su contexto donde puede ser positivo, negativo, y neutro.
 
+* [Limpiador de Datos](https://github.com/Rainini1/ProyectoBI/blob/master/limpiador.py) - Archivo auxiliar para eliminar hashtags, URL's y numerales
 #### Limpieza de Datos
 Para limpiar el texto del tweet se utilizó un código en Python, ya que cuando manejamos texto en Python, una de las operaciones más comunes es la búsqueda de una subcadena; ya sea para obtener su posición en el texto o simplemente para comprobar si está presente. Por lo que para la busqueda de tags, emoticones, y links, para su posterior eliminación es necesario recurrir a las Expresiones Regulares, también conocidas como Patrones.
 Para utilizar Expresiones Regulares, Python provee el módulo re. Importando este módulo podemos crear objetos de tipo patrón y generar objetos tipo matcher, que son los que contienen la información de la coincidencia del patrón en la cadena.
