@@ -55,17 +55,19 @@ Para la otra vista la utilizaremos para enviar la información de la base en Cou
 
 Con la vista pre-procesada y con tweets únicamente de Ecuador, lugar de donde se realizará el análisis de los datos, se debe procesar el campo Text para poder analizar la opinión pública desde su contexto original. El procesamiento de los datos involucra la eliminación de links, emoticones y tags, en el caso de los tags no deben borrarse completamente, por el contrario, solo eliminar el carácter “#”. La siguiente parte del procesamiento es la clasificación de los tweets según su contexto donde puede ser positivo, negativo, y neutro.
 
-* [Limpiador de Datos](https://github.com/Rainini1/ProyectoBI/blob/master/limpiador.py) - Archivo auxiliar para eliminar hashtags, URL's y numerales
-
-
 #### Limpieza de Datos
 Para limpiar el texto del tweet se utilizó un código en Python, ya que cuando manejamos texto en Python, una de las operaciones más comunes es la búsqueda de una subcadena; ya sea para obtener su posición en el texto o simplemente para comprobar si está presente. Por lo que para la busqueda de tags, emoticones, y links, para su posterior eliminación es necesario recurrir a las Expresiones Regulares, también conocidas como Patrones.
 Para utilizar Expresiones Regulares, Python provee el módulo re. Importando este módulo podemos crear objetos de tipo patrón y generar objetos tipo matcher, que son los que contienen la información de la coincidencia del patrón en la cadena.
+
+* [Limpiador de Datos](https://github.com/Rainini1/ProyectoBI/blob/master/limpiador.py) - Archivo auxiliar para eliminar hashtags, URL's y numerales
+
   
 #### Clasificación de Datos
 Para la clasificación de los tweets utilizamos una librería en Python
 
 Utilizamos un clasificador Naive Bayes con 100 tweets totalmente limpios para el entrenamiento la cual clasifica el campo Text según los datos de entrenamiento en positivos, negativos y neutros. Ver figura 2. Esta clasificación le agregamos como un nuevo campo en nuestra base principal como Sentiment.
+
+
 
 ### Análisis de Datos
 Para el análisis sobre el text de los tweets, para conocer la opción de los usuarios, la herramienta Elasticsearch nos permitirá realizar búsquedas sobre el texto del tweet. Elasticsearch es la herramienta que permite indexar y analizar en tiempo real grandes cantidades de datos. Realiza la búsqueda por texto gracias a un DSL y un Api para búsquedas más complicadas. ElasticSearch organiza la información en colecciones de documentos o Índices (index) y Tipos de Documentos (Type).
@@ -73,6 +75,7 @@ Elasticsearch a diferencia de otros sistemas, no necesita declarar un esquema de
 
 * [ElasticSearch](http://localhost:9200) - Local
 * [Mapping](https://github.com/Rainini1/ProyectoBI/blob/master/mappings.txt) - Crear Indice
+* [River] (https://github.com/Rainini1/ProyectoBI/blob/master/comando-CURL-river.txt) - CURL para enviar datos de CouchDB a Elastic Searche
 
 Luego de la creación del índice podemos visualizar el índice creado “tweets” especificando todos los campos creados, los tipos de datos deben coincidir con la base principal de los tweets.
 Debemos pasar la vista con los respectivos campos especificados anteriormente de la Base en CouchDB hacia ElasticSearch donde se realizará la búsqueda y la presentación de los datos, para el paso de los datos usamos un comando curl.
