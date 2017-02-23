@@ -31,7 +31,7 @@ El propósito del presente proyecto es la investigación e implementación del f
 Para la primera fase del proyecto se recolectó datos utilizando un cosechador de tweets entregado al inicio del curso a través del aula virtual. Para poder extraer tweets se establecieron las coordenadas correspondientes a la ciudad de Quito.
 Las herramientas utilizadas para esta fase corresponden a un script codificado en Python, una base de datos noSQL como CouchDb y los utilitarios de Twitter para Python.
 
-* Harverster (https://github.com/Rainini1/ProyectoBI/blob/master/harvester_uio%20(2).py) - Recolector de Tweets
+* [Harverster] (https://github.com/Rainini1/ProyectoBI/blob/master/harvester_uio%20(2).py) - Recolector de Tweets
 
 ### Pre-procesamiento de Datos
 
@@ -48,7 +48,7 @@ Para la otra vista la utilizaremos para enviar la información de la base en Cou
    + Sreen_name: Del campo User se extrae el nombre del usuario
    
    
-* Vistas (https://github.com/Rainini1/ProyectoBI/blob/master/vistas.js) - Creación de vistas para CouchDB
+* [Vistas] (https://github.com/Rainini1/ProyectoBI/blob/master/vistas.js) - Creación de vistas para CouchDB
 
 
 ### Procesamiento de Datos
