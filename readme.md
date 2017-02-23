@@ -1,12 +1,12 @@
-<h1>ESCUELA POLITÉCNICA NACIONAL</h1>
-<h1>FACULTAD DE INGENIERÍA DE SISTEMAS</h1>
-<h1>INTELIGENCIA DE NEGOCIOS</h1>
+#ESCUELA POLITÉCNICA NACIONAL
+#FACULTAD DE INGENIERÍA DE SISTEMAS
+#INTELIGENCIA DE NEGOCIOS
 
 
 ##INTEGRANTES:
-*Dávila David
-*Granda Alexandra
-*Unapanta Luis
+* Dávila David
+* Granda Alexandra
+* Unapanta Luis
 
 ##TEMA
 Diseño e Implementación de un sistema clasificador de sentimientos para Política
@@ -20,9 +20,3 @@ El propósito del presente proyecto es la investigación e implementación del f
 * [ElasticSearch](https://www.elastic.co/) - Herramienta de Map - Reduce.
 * [Kibana](https://www.elastic.co/products/kibana) - Presentación de Gráficos.
 
-<style>
-h1   {
-	text-align: center;
-
-}
-</style>
