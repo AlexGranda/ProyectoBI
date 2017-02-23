@@ -1,0 +1,33 @@
+#!/bin/bash
+
+sudo curl -XPOST 'http://localhost:9200/tweetsbi' -d '{
+	"settings": {
+		"number_of_shards": "1",
+		"number_of_replicas": "1"
+    },
+	"mappings": {
+		"tweet": {
+			"properties": {
+				"id": {
+					"type": "long"
+				},
+				"created_at": {
+					"format": "EE MMM d HH:mm:ss Z yyyy||dd/MM/yyyy||dd-MM-yyyy||date_optional_time",
+					"type": "date"
+				},
+				"text": {
+					"type": "string"
+				},
+				"followers_count": {
+					"type": "long"
+				},
+				"screen_name": {
+					"type": "string"
+				},
+				"sentiment": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}'
