@@ -1,0 +1,1 @@
+sudo curl -X PUT '127.0.0.1:9200/_river/tweetsbi/_meta' -d '{ "type" : "couchdb", "couchdb" : { "host" : "localhost", "port" : 5984, "db" : "tweetsbi", "filter" : null }, "index" : { "index" : "tweetsbi", "type" : "testdb", "bulk_size" : "100", "bulk_timeout" : "10ms" } }'
