@@ -20,3 +20,11 @@ El propósito del presente proyecto es la investigación e implementación del f
 * [ElasticSearch](https://www.elastic.co/) - Herramienta de Map - Reduce.
 * [Kibana](https://www.elastic.co/products/kibana) - Presentación de Gráficos.
 
+## FASES DEL PROYECT
+* Adquisicion de Datos
+* Pre-procesamiento de Datos
+* Procesamiento de datos
+* Adquisicion de Datos
+
+
+
