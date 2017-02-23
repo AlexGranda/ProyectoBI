@@ -10,7 +10,7 @@ def elimina_tildes(cadena):
     	s = ''.join((c for c in unicodedata.normalize('NFD',unicode(cadena)) if unicodedata.category(c) != 'Mn'))
 	return s.decode()
 
-cadena1="Hola estó es una cadenita por @ldurider #cadenita #holamama http://platzi.com/blog/ www.bit.ly/1345 :) :') ".decode('utf-8')
+cadena1=argv[1].decode('utf-8')
 
 cadena= elimina_tildes(cadena1)
 
