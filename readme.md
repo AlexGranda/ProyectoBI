@@ -64,8 +64,8 @@ Utilizamos un clasificador Naive Bayes con 100 tweets totalmente limpios para el
 Para el análisis sobre el text de los tweets, para conocer la opción de los usuarios, la herramienta Elasticsearch nos permitirá realizar búsquedas sobre el texto del tweet. Elasticsearch es la herramienta que permite indexar y analizar en tiempo real grandes cantidades de datos. Realiza la búsqueda por texto gracias a un DSL y un Api para búsquedas más complicadas. ElasticSearch organiza la información en colecciones de documentos o Índices (index) y Tipos de Documentos (Type).
 Elasticsearch a diferencia de otros sistemas, no necesita declarar un esquema de la información que añadimos, pero para sacar mayor partido a la información tendremos que añadir los llamados mappings que funcionan como un schema. Para nuestro caso crearemos un índice y su respectivo mapping con siguientes campos respetivos de la base de datos principal de tweets.
 
-Para poder acceder a Kibana, ingresamos a:
-* [ElasticSearch](http://localhost:9200) - Herramienta de Map - Reduce.
+* [ElasticSearch](http://localhost:9200) - Local
+* [Mapping](https://github.com/Rainini1/ProyectoBI/blob/master/mappings.txt) - Crear Indice
 
 Luego de la creación del índice podemos visualizar el índice creado “tweets” especificando todos los campos creados, los tipos de datos deben coincidir con la base principal de los tweets.
 Debemos pasar la vista con los respectivos campos especificados anteriormente de la Base en CouchDB hacia ElasticSearch donde se realizará la búsqueda y la presentación de los datos, para el paso de los datos usamos un comando curl.
@@ -77,6 +77,7 @@ Por lo que contaremos con visualizaciones que permitan concluir lo siguiente:
 +	Impacto de las redes sociales (Twitter)
 +	Impacto negativo y positivo en Twitter.
 De las ventajas más llamativas de Kibana podemos destacar la integración con ElasticSearch o Logstash y la fácil utilización de la interfaz. 
+
 Para poder acceder a Kibana, se ingresa a:
 * [Kibana](http://localhost:9200) - Presentación de Gráficos.
 
